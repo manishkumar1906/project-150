@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+</head>
+
+<body>
+  <a-scene background="#BFA10F">
+
+    <a-camera wasd-controls-enabled="false" position="0 8 20"></a-camera>
+
+    <!-------------------------------------------Asset Management------------------------------------------->
+    <a-assets>      
+
+      <!--Add Code Here-->
+      <a-assets-item id = "train-obj" src="tinker.obj"></a-assets-item>
+      <a-assets-item id ="train-mtl" src="obj.mtl"></a-assets-item>
+      <img id = "sky" src="sky.jpg">
+    </a-assets>
+
+    <a-sky src = "#sky"></a-sky>
+     
+    
+    <!--------------------------------------OBJ Models----------------------------------------------------------->   
+  
+    <!--Add code here-->
+    <a-entity obj-model="obj:#train-obj; mtl:#train-mtl" position ="0 0 0" rotation="-90 0 0" scale="0.14 0.14 0.14"></a-entity>
+
+    
+    <!-------------------------------------Circular Plane----------------------------------------------->
+    
+    <a-circle id="floor" position="-0.4 -0.76 -25" rotation="-90 0 0" radius="100" shadow="receive: true" visible="true"
+      src="ground.jpg">
+    </a-circle>
+    
+  
+    <!-------------------------------------Room Walls----------------------------------------------->
+    <a-entity >
+
+
+    </a-entity>
+    
+  </a-scene>
+</body>
+
+</html>
